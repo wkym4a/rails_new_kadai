@@ -21,8 +21,8 @@
     <% @lines.each do |line| %>
       <tr>
         <td rowspan="2"><%= link_to "● " + line.content.to_s , line , class: 'btn btn-default'%></td>
-        <td><%= line.created_at.strftime("%Y年 %m月 %d日")  %></td>
-        <td><%= line.updated_at.strftime("%Y年 %m月 %d日")  %></td>
+        <td><%= line.created_at.strftime("%Y年 %m月 %d日 %H時%M分")  %></td>
+        <td><%= line.updated_at.strftime("%Y年 %m月 %d日 %H時%M分")  %></td>
       </tr>
 
       <tr>

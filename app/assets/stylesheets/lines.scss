@@ -1,7 +1,30 @@
 // Place all the styles related to the lines controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  position: relative;
+  min-height: 100%;
+  text-align: center;
+}
 
-h1{
-  color: blue;
+body {
+}
+
+.container {
+  width: 980px;
+  margin: auto;
+
+}
+
+.form_content{
+  border:solid 1px black;
+  text-align: left;
+  margin-right: 100px;
+  margin-left: 100px;
+  width: 500px;
+  height:80px;
+}
+
+.form_time{
+  float: right;
 }

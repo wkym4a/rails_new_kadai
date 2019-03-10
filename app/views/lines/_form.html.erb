@@ -15,13 +15,14 @@
 </head>
 
 
-<%= form_with(model: line, local: true, url: choose_new_or_edit ) do |form| %>
-  <div class="">
-    <a class="field">
-      <%= form.text_field :content, id: :line_content %>
-    </a>
+<div class="container">
+  <%= form_with(model: line, local: true, url: choose_new_or_edit ) do |form| %>
+    <div>
+      <%= form.text_field :content, id: :line_content ,class: :form_content %>
+    </div>
+
     <a class="actions">
       <%= form.submit %>
     </a>
-  <div>
-<% end %>
+  <% end %>
+<div>

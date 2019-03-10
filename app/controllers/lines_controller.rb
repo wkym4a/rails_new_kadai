@@ -1,7 +1,6 @@
 class LinesController < ApplicationController
   before_action :set_line, only: [:show, :edit, :update, :destroy]
 
-
   # 一覧画面(ついったーっぽく、新しい投稿ほど上に来るように)
   def index
     @lines = Line.all.order(id: "DESC")
