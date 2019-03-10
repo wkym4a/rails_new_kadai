@@ -1,0 +1,18 @@
+<head>
+  <h1>↓こうつぶやきますか？↓</h1>
+</head>
+
+<%= render 'display' %>
+
+<footer>
+  <%= form_with(model: @line, url: lines_path, local: true, method: 'POST') do |form| %>
+    <%= form.hidden_field :content %>
+    <%= form.submit  "登録する" %>
+  <% end %>
+
+  <%= form_with(model: @line, url: new_line_path, local: true, method: 'GET') do |form| %>
+    <%= form.hidden_field :content %>
+    <%= form.submit  "もどる", name: 'back' %>
+  <% end %>
+
+</footer>

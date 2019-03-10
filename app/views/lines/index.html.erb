@@ -20,15 +20,20 @@
   <tbody>
     <% @lines.each do |line| %>
       <tr>
-        <td rowspan="2"><%= link_to "● " + line.content.to_s , line %></td>
+        <td rowspan="2"><%= link_to "● " + line.content.to_s , line , class: 'btn btn-default'%></td>
         <td><%= line.created_at.strftime("%Y年 %m月 %d日")  %></td>
         <td><%= line.updated_at.strftime("%Y年 %m月 %d日")  %></td>
-
       </tr>
 
       <tr>
-        <td><%= link_to 'ツイートを編集する', edit_line_path(line) %></td>
-        <td><%= link_to 'ツイートを削除する', line, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <td><button type="button" name="button">
+          <%= link_to 'ツイートを編集する', edit_line_path(line), class: 'btn btn-default'  %>
+        </button></td>
+
+        <td><button type="button" name="button">
+          <%= link_to 'ツイートを削除する', line, method: :delete, data: { confirm: '本当に削除してよろしいですか?' } %>
+        </button></td>
 
       </tr>
     <% end %>

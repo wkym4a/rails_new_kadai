@@ -1,22 +1,27 @@
-<%= form_with(model: line, local: true) do |form| %>
-  <% if line.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(line.errors.count, "error") %> prohibited this line from being saved:</h2>
+<head>
+  <%= form_with(model: line, local: true) do |form| %>
+    <% if line.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(line.errors.count, "error") %> prohibited this line from being saved:</h2>
 
-      <ul>
-      <% line.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+        <ul>
+        <% line.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
   <% end %>
+</head>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_field :content, id: :line_content %>
-  </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<%= form_with(model: line, local: true, url: choose_new_or_edit ) do |form| %>
+  <div class="">
+    <a class="field">
+      <%= form.text_field :content, id: :line_content %>
+    </a>
+    <a class="actions">
+      <%= form.submit %>
+    </a>
+  <div>
 <% end %>

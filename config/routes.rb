@@ -4,4 +4,12 @@ Rails.application.routes.draw do
 
   resources :lines
 
+  resources :lines do
+    
+    collection do
+      post :confirm
+    end
+
+  end
+
 end

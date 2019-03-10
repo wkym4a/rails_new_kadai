@@ -1,9 +1,18 @@
-<p id="notice"><%= notice %></p>
+<head>
+  <h1>↓こうつぶやきました↓</h1>
+</head>
 
-<p>
-  <strong>Content:</strong>
-  <%= @line.content %>
-</p>
+<%= render 'display' %>
 
-<%= link_to 'Edit', edit_line_path(@line) %> |
-<%= link_to 'Back', lines_path %>
+<footer>
+  <div class="">
+    <%= link_to '更新する', edit_line_path(@line) %>
+    <%= link_to '削除する', line_path(@line) ,
+        method: :delete, data: { confirm: '本当に削除してよろしいですか?' } %>
+  </div>
+
+  <div class="">
+    <%= link_to 'Back', lines_path %>
+
+  </div>
+</footer>

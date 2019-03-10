@@ -1,0 +1,20 @@
+<header>
+　<p id="notice"><%= notice %></p>
+</header>
+
+<div>
+  <strong>Content:</strong>
+  <%= @line.content %>
+</div>
+
+<div>
+  <!--新規時及び(新規の)確認時は、時間情報を表示させない-->
+  <% if not(action_name == 'new' || action_name == 'confirm') %>
+    <strong>登録時間:</strong>
+    <%= @line.created_at %>
+
+    <strong>更新時間:</strong>
+    <%= @line.updated_at %>
+  <% end %>
+
+</div>
