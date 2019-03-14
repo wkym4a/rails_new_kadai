@@ -1,17 +1,19 @@
-<header>
-　<p id="notice"><%= notice %></p>
-</header>
 
-<div class="container">
-  <div class="form_content"><%= @line.content %></div>
 
-  <div>
+<div class="confirm_form">
+
+
+  <%= text_area "","readonly", class: "confirm_form_child" ,
+  value: @line.content ,readonly: true %>
+
+  <div class="form_content form_content_hide"><%= @line.content %></div>
+
+  <div class="confirm_form_time">
     <!--新規時及び(新規の)確認時は、時間情報を表示させない-->
     <% if not(action_name == 'new' || action_name == 'confirm') %>
       <a class="form_time">
         <strong>登録時間:</strong>
         <%= @line.created_at.strftime("%Y年 %m月 %d日 %H時%M分") %>
-      
         <strong>更新時間:</strong>
         <%= @line.updated_at.strftime("%Y年 %m月 %d日 %H時%M分") %>
       </a>

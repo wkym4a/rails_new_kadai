@@ -3,3 +3,21 @@
  *= require_tree .
  *= require_self
  */
+ html {
+   font-size: 62.5%;
+   height: 100%;
+ }
+
+ body {
+   height: 100%;
+ }
+
+
+#MainContainer{
+  background-color: powderblue;
+  width: 980px;
+  margin: auto;
+  position: relative;
+  min-height: 100%;
+
+}

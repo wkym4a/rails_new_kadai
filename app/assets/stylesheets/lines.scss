@@ -1,30 +1,203 @@
 // Place all the styles related to the lines controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-html {
+
+header{
+  height: 160px;
+  width: 900px;
+
   position: relative;
-  min-height: 100%;
+  margin: 20px auto;
+
+  background-color: blue;
+}
+
+.head_title{
+height: 80px;
+width: 490px;
+margin: auto;
+
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+
+  color: black;
   text-align: center;
 }
 
-body {
+
+.head_btn{
+width: 160px;
+height: 30px;
+
+position: absolute;
+right: 0;
+bottom: 0;
+margin:20px;
+
+  color: black;
+  display: inline-block;
+  text-align: center;
+  padding-top: 10px;
 }
 
-.container {
-  width: 980px;
-  margin: auto;
+.btn_return{
+float: right;
+margin-right: 40px;
+}
 
+/*index画面*/
+.index_box{
+  width: 920px;
+  height:400px;
+
+  position: relative;
+  margin:20px auto;
+
+  background-color:gray;
+}
+
+/*↓スクロール用*/
+thead.scrollHead,tbody.scrollBody{
+  display:block;
+}
+tbody.scrollBody{
+  overflow-y:scroll;
+  height:400px;
+}
+
+/*↑スクロールバー分だけ左にずらず*/
+.scrollHead{
+  margin-right: 15px;
+}
+/*↑スクロール用*/
+
+
+.index_box_title{
+
+  border-style: solid;
+  border-width: 0.2px;
+
+  color: black;
+  background-color: lightgray;
+
+  text-align: center;
+}
+
+
+.index_box_line{
+
+  border-style: solid;
+  border-width: 0.2px;
+  color: blue;
+}
+
+
+.row-eq-height {
+  flex-wrap: wrap;
+}
+
+table td[class*=col-].index_box_line{
+  position: relative;
+}
+
+.index_row_content{
+  position: absolute;
+
+
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+
+  background-color: white;
+    border-style: solid;
+    border-width: 0.2px;
+}
+
+
+.index_row_row{
+
+
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+
+  background-color: white;
+    border-style: solid;
+    border-width: 0.2px;
+}
+
+.css_test{
+  color: red;
+}
+
+
+/*登録画面（新規，更新*/
+.input_form{
+  width: 920px;
+  height:300px;
+
+  position: relative;
+  margin:20px auto;
+
+  background-color:gray;
 }
 
 .form_content{
-  border:solid 1px black;
-  text-align: left;
-  margin-right: 100px;
-  margin-left: 100px;
-  width: 500px;
-  height:80px;
+  width: 560px;
+  height:200px;
+
+    position: absolute;
+    margin:40px 30px;
+
+}
+
+.place_btn{
+
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+}
+
+
+/*閲覧画面（新規時確認，参照で開く*/
+.confirm_form{
+  width: 920px;
+  height:280px;
+
+  position: relative;
+  margin:20px auto;
+
+  background-color:gray;
+}
+
+.confirm_form_child{
+  width: 600px;
+  height:200px;
+
+  position:absolute;
+  margin:auto;
+  top:20px;
+    left: 0;
+    right: 0;
+    
+  background-color:white;
+}
+
+div.form_content_hide{
+  display: none;
+}
+
+.confirm_form_time{
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .form_time{
-  float: right;
+  color: black;
 }

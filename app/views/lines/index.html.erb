@@ -1,44 +1,94 @@
 <header>
 
-  <h1>一覧</h1>
 
-  <p id="notice"><%= notice %></p>
+    <h1 class = "head_title">一覧</h1>
 
-  <%= link_to '【新しくつぶやく】', new_line_path %>
+  <%= link_to '新しくつぶやく', new_line_path ,
+              class: "label  label-info head_btn" %>
 
 </header>
 
-<table>
-  <thead>
-    <tr>
-      <th >↓過去につぶやいた内容です↓</th>
-      <th >投稿日時</th>
-      <th >更新日時</th>
-    </tr>
-  </thead>
+  <p id="notice"><%= notice %></p>
 
-  <tbody>
-    <% @lines.each do |line| %>
-      <tr>
-        <td rowspan="2"><%= link_to "● " + line.content.to_s , line , class: 'btn btn-default'%></td>
-        <td><%= line.created_at.strftime("%Y年 %m月 %d日 %H時%M分")  %></td>
-        <td><%= line.updated_at.strftime("%Y年 %m月 %d日 %H時%M分")  %></td>
+<div class="index_box_frame">
+
+  <table class="index_box" >
+
+    <thead class="scrollHead">
+      <tr class="row row-eq-height">
+        <th  class="col-xs-6 index_box_title">↓過去につぶやいた内容です↓</th>
+
+        <th  class="col-xs-6 index_box_title">
+
+          <div class="row row-eq-height">
+
+            <a  class="col-xs-6 index_box_title" >投稿日時</a>
+            <a  class="col-xs-6 index_box_title" >更新日時</a>
+
+            <a  class="col-xs-2 index_box_title" ></a>
+            <a  class="col-xs-4 index_box_title" ></a>
+            <a  class="col-xs-2 index_box_title" ></a>
+            <a  class="col-xs-4 index_box_title" ></a>
+
+          </div>
+        </th>
+
+
       </tr>
+    </thead>
 
-      <tr>
 
-        <td><button type="button" name="button">
-          <%= link_to 'ツイートを編集する', edit_line_path(line), class: 'btn btn-default'  %>
-        </button></td>
+    <tbody class="scrollBody">
+      <% @lines.each do |line| %>
 
-        <td><button type="button" name="button">
-          <%= link_to 'ツイートを削除する', line, method: :delete, data: { confirm: '本当に削除してよろしいですか?' } %>
-        </button></td>
 
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <tr class="row row-eq-height">
+          <td class="col-xs-6 index_box_line">
+            <%= link_to line.content.to_s , line ,
+             class: 'index_row_content' %></td>
+
+          <td class="col-xs-6 index_box_line">
+
+            <div class="row row-eq-height ">
+              <a class="col-xs-6 index_row_row">
+                <%= label :page,line.created_at.strftime("%Y年 %m月 %d日 %H時%M分"),
+                class: 'index_row_created_at'  %>
+              </a>
+
+              <a class="col-xs-6 index_row_row">
+                <%= label :page,line.updated_at.strftime("%Y年 %m月 %d日 %H時%M分"),
+                class: 'index_row_updated_at'  %>
+              </a>
+
+              <a class="col-xs-2 index_row_row"></a>
+              <%= link_to 'ツイートを編集する', edit_line_path(line),
+               class: 'btn btn-default col-xs-4 index_row_row'  %>
+
+
+              <a class="col-xs-2 index_row_row"></a>
+              <%= link_to 'ツイートを削除する', line, method: :delete,
+               data: { confirm: '本当に削除してよろしいですか?' } ,
+                class: 'btn btn-default col-xs-4 index_row_row' %>
+
+            </div>
+
+          </td>
+
+
+
+        </tr>
+
+
+
+      <% end %>
+    </tbody>
+  </table>
+
+
+</div>
+
+
+
 
 <footer>
 

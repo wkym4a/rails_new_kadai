@@ -2,12 +2,10 @@ Rails.application.routes.draw do
 
   root 'tops#index'
 
-  resources :lines
-
   resources :lines do
-    
+
     collection do
-      post :confirm
+      get :confirm
     end
 
   end

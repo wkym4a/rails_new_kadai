@@ -15,14 +15,17 @@
 </head>
 
 
-<div class="container">
-  <%= form_with(model: line, local: true, url: choose_new_or_edit ) do |form| %>
-    <div>
-      <%= form.text_field :content, id: :line_content ,class: :form_content %>
-    </div>
 
-    <a class="actions">
-      <%= form.submit %>
+  <%= form_with(model: line, local: true, url: choose_new_or_edit ,
+  class: "input_form", method: choose_new_or_edit_Method ) do |form| %>
+
+      <%= form.text_area :content, id: :line_content ,class: :form_content %>
+
+    <a class="actions place_btn">
+      <%= form.submit value=choose_new_or_edit_BtnName, class: "btn btn-default " %>
     </a>
   <% end %>
-<div>
+
+  <footer>
+    <%= link_to '戻る', lines_path , class: "btn btn-default btn_return" %>
+  </footer>

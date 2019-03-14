@@ -1,18 +1,23 @@
-<head>
-  <h1>↓こうつぶやきますか？↓</h1>
-</head>
+<header>
+  <h1 class = "head_title">↓こうつぶやきますか？↓</h1>
+</header>
+
 
 <%= render 'display' %>
 
 <footer>
-  <%= form_with(model: @line, url: lines_path, local: true, method: 'POST') do |form| %>
+  <%= form_with(model: @line,local: true, url: lines_path,
+    method: 'POST') do |form| %>
     <%= form.hidden_field :content %>
-    <%= form.submit  "登録する" %>
+    <%= form.submit  "登録する" , class: "btn btn-default " %>
+
   <% end %>
 
-  <%= form_with(model: @line, url: new_line_path, local: true, method: 'GET') do |form| %>
+  <%= form_with(model: @line,local: true,  url: new_line_path,
+   method: 'GET') do |form| %>
     <%= form.hidden_field :content %>
-    <%= form.submit  "もどる", name: 'back' %>
+    <%= form.submit  "もどる", name: 'back' ,class: "label  label-info btn_return"%>
+
   <% end %>
 
 </footer>
