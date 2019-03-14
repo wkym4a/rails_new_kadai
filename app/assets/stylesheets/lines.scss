@@ -13,29 +13,28 @@ header{
 }
 
 .head_title{
-height: 80px;
-width: 490px;
-margin: auto;
+  height: 80px;
+  width: 490px;
+  margin: auto;
 
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
   color: black;
   text-align: center;
 }
 
-
 .head_btn{
-width: 160px;
-height: 30px;
+  width: 160px;
+  height: 30px;
 
-position: absolute;
-right: 0;
-bottom: 0;
-margin:20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin:20px;
 
   color: black;
   display: inline-block;
@@ -44,8 +43,8 @@ margin:20px;
 }
 
 .btn_return{
-float: right;
-margin-right: 40px;
+  float: right;
+  margin-right: 40px;
 }
 
 /*index画面*/
@@ -68,15 +67,13 @@ tbody.scrollBody{
   height:400px;
 }
 
-/*↑スクロールバー分だけ左にずらず*/
+/*スクロールバー分だけ左にずらず*/
 .scrollHead{
   margin-right: 15px;
 }
 /*↑スクロール用*/
 
-
 .index_box_title{
-
   border-style: solid;
   border-width: 0.2px;
 
@@ -86,14 +83,11 @@ tbody.scrollBody{
   text-align: center;
 }
 
-
 .index_box_line{
-
   border-style: solid;
   border-width: 0.2px;
   color: blue;
 }
-
 
 .row-eq-height {
   flex-wrap: wrap;
@@ -106,35 +100,26 @@ table td[class*=col-].index_box_line{
 .index_row_content{
   position: absolute;
 
-
-top: 0;
-bottom: 0;
-right: 0;
-left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 
   background-color: white;
-    border-style: solid;
-    border-width: 0.2px;
+  border-style: solid;
+  border-width: 0.2px;
 }
-
 
 .index_row_row{
-
-
-top: 0;
-bottom: 0;
-right: 0;
-left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 
   background-color: white;
-    border-style: solid;
-    border-width: 0.2px;
+  border-style: solid;
+  border-width: 0.2px;
 }
-
-.css_test{
-  color: red;
-}
-
 
 /*登録画面（新規，更新*/
 .input_form{
@@ -151,18 +136,16 @@ left: 0;
   width: 560px;
   height:200px;
 
-    position: absolute;
-    margin:40px 30px;
+  position: absolute;
+  margin:40px 30px;
 
 }
 
 .place_btn{
-
-      position: absolute;
-      right: 30px;
-      bottom: 30px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
 }
-
 
 /*閲覧画面（新規時確認，参照で開く*/
 .confirm_form{
@@ -182,9 +165,9 @@ left: 0;
   position:absolute;
   margin:auto;
   top:20px;
-    left: 0;
-    right: 0;
-    
+  left: 0;
+  right: 0;
+
   background-color:white;
 }
 

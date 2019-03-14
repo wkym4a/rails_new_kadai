@@ -9,7 +9,7 @@
   <div class="form_content form_content_hide"><%= @line.content %></div>
 
   <div class="confirm_form_time">
-    <!--新規時及び(新規の)確認時は、時間情報を表示させない-->
+    <!--新規時は、時間情報を表示させない-->
     <% if not(action_name == 'new' || action_name == 'confirm') %>
       <a class="form_time">
         <strong>登録時間:</strong>

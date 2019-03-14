@@ -25,7 +25,6 @@ class LinesController < ApplicationController
 
   #確認画面表示
   def confirm
-  #  binding.pry
       @line = Line.new(line_params)
       render 'new' if @line.invalid?
   end
@@ -41,7 +40,6 @@ class LinesController < ApplicationController
         #処理後は投稿内容確認画面に移動(一覧に移動させる場合は引数を@line→lines_pathと変更)
         format.html { redirect_to @line, notice: 'つぶやきました。' }
       else
-        #binding.pry
         format.html { render :new }
       end
     end
@@ -49,7 +47,6 @@ class LinesController < ApplicationController
 
   # 更新処理……情報は「set_line」で取得
   def update
-    #binding.pry
     respond_to do |format|
       if @line.update(line_params)
 
@@ -73,9 +70,7 @@ class LinesController < ApplicationController
   private
     # idでデータ取得
     def set_line
-   @line = Line.find(params[:id])
-
-  #    binding.pry
+      @line = Line.find(params[:id])
     end
 
     #DB更新用にパラメータセット

@@ -1,14 +1,11 @@
 <header>
-
-
-    <h1 class = "head_title">一覧</h1>
+  <h1 class = "head_title">一覧</h1>
 
   <%= link_to '新しくつぶやく', new_line_path ,
               class: "label  label-info head_btn" %>
-
 </header>
 
-  <p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
 <div class="index_box_frame">
 
@@ -19,7 +16,6 @@
         <th  class="col-xs-6 index_box_title">↓過去につぶやいた内容です↓</th>
 
         <th  class="col-xs-6 index_box_title">
-
           <div class="row row-eq-height">
 
             <a  class="col-xs-6 index_box_title" >投稿日時</a>
@@ -32,20 +28,16 @@
 
           </div>
         </th>
-
-
       </tr>
     </thead>
 
-
     <tbody class="scrollBody">
+
       <% @lines.each do |line| %>
-
-
         <tr class="row row-eq-height">
           <td class="col-xs-6 index_box_line">
-            <%= link_to line.content.to_s , line ,
-             class: 'index_row_content' %></td>
+          <%= link_to line.content.to_s , line ,class: 'index_row_content' %>
+          </td>
 
           <td class="col-xs-6 index_box_line">
 
@@ -64,7 +56,6 @@
               <%= link_to 'ツイートを編集する', edit_line_path(line),
                class: 'btn btn-default col-xs-4 index_row_row'  %>
 
-
               <a class="col-xs-2 index_row_row"></a>
               <%= link_to 'ツイートを削除する', line, method: :delete,
                data: { confirm: '本当に削除してよろしいですか?' } ,
@@ -73,25 +64,10 @@
             </div>
 
           </td>
-
-
-
         </tr>
-
-
 
       <% end %>
     </tbody>
   </table>
 
-
 </div>
-
-
-
-
-<footer>
-
-</footer>
-
-<br>
