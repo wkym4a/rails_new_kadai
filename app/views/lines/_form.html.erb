@@ -14,18 +14,17 @@
   <% end %>
 </head>
 
+<%= form_with(model: line, local: true, url: choose_new_or_edit ,
+class: "input_form", method: choose_new_or_edit_Method ) do |form| %>
 
+    <%= form.text_area :content, id: :line_content ,class: :form_content %>
 
-  <%= form_with(model: line, local: true, url: choose_new_or_edit ,
-  class: "input_form", method: choose_new_or_edit_Method ) do |form| %>
+  <a class="actions place_btn">
+    <%= form.submit value=choose_new_or_edit_BtnName, class: "btn btn-default " %>
+  </a>
 
-      <%= form.text_area :content, id: :line_content ,class: :form_content %>
+<% end %>
 
-    <a class="actions place_btn">
-      <%= form.submit value=choose_new_or_edit_BtnName, class: "btn btn-default " %>
-    </a>
-  <% end %>
-
-  <footer>
-    <%= link_to '戻る', lines_path , class: "btn btn-default btn_return" %>
-  </footer>
+<div>
+  <%= link_to '戻る', lines_path , class: "btn btn-default btn_return" %>
+</div>

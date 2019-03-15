@@ -5,7 +5,7 @@
 
 <%= render 'display' %>
 
-<footer>
+<div>
   <%= form_with(model: @line,local: true, url: lines_path,
     method: 'POST') do |form| %>
     <%= form.hidden_field :content %>
@@ -20,4 +20,4 @@
 
   <% end %>
 
-</footer>
+</div>

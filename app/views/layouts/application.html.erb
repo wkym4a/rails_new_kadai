@@ -10,7 +10,13 @@
 
   <body>
     <div class="container" id="MainContainer">
+      
       <%= yield %>
+
+      <footer>
+        <%= link_to 'アプリ選択画面へ戻る', root_path , class: "btn btn-default btn_foot" %>
+      </footer>
+
     </div>
 
   </body>

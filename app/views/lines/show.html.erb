@@ -4,14 +4,24 @@
 
 <%= render 'display' %>
 
-<footer>
-  <div class="">
-    <%= link_to '更新する', edit_line_path(@line), class: "btn btn-default "  %>
-    <%= link_to '削除する', line_path(@line) ,
-        method: :delete, class: "btn btn-default " ,
-         data: { confirm: '本当に削除してよろしいですか?' } %>
-  </div>
+<div>
 
-  <%= link_to '戻る', lines_path , class: "btn btn-default  btn_return"  %>
+  <% if notice==nil %>
 
-</footer>
+    <div>
+      <%= link_to '更新する', edit_line_path(@line), class: "btn btn-default "  %>
+      <%= link_to '削除する', line_path(@line) ,
+          method: :delete, class: "btn btn-default " ,
+           data: { confirm: '本当に削除してよろしいですか?' } %>
+    </div>
+
+    <%= link_to '戻る', lines_path , class: "btn btn-default  btn_return"  %>
+
+  <% else %>
+
+    <%= link_to 'インデックス画面に戻る', lines_path ,
+    class: "btn btn-default  btn_return_index"  %>
+
+  <% end %>
+
+</div>
