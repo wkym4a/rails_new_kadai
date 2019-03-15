@@ -168,7 +168,10 @@ table td[class*=col-].index_box_line{
   left: 0;
   right: 0;
 
-  background-color:#CCCCCC;
+  /*filter:alpha(opacity=0);
+  -moz-opacity: 0;
+  opacity: 0;*/
+  background-color:gray;
 }
 
 div.form_content_hide{
