@@ -10,6 +10,18 @@
 
   <body>
     <div class="container" id="MainContainer">
+
+      <header>
+        <h1 class = "head_title">
+          <%= get_title_name %>
+        </h1>
+
+        <% if @view_name == "lines_index" %>
+          <%= link_to '新しくつぶやく', new_line_path ,
+                      class: "label  label-info head_btn" %>
+        <% end %>
+
+      </header>
       
       <%= yield %>
 

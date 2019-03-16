@@ -25,4 +25,32 @@ module LinesHelper
     end
   end
 
+  def get_title_name
+  #  binding.pry
+    case @view_name
+      when "tops_index"
+        return "トップ画面です。"
+
+      when "lines_new"
+        return "つぶやいてください。"
+
+      when "lines_confirm"
+        return "こうつぶやきますか？"
+
+      when "lines_edit"
+        return "つぶやきを変更してください。"
+
+      when "lines_index"
+        return "一覧"
+
+      when "lines_new"
+
+      when "lines_show"
+        return "↓こうつぶやきました。↓"
+
+      else
+        return "エラー……想定外の画面です。"
+      end
+  end
+
 end
