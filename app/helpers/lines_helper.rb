@@ -1,5 +1,7 @@
 module LinesHelper
   def choose_new_or_edit
+
+      binding.pry
     if action_name == 'new' || action_name == 'confirm'
       confirm_lines_path
     elsif action_name == 'edit' || action_name == 'update'
@@ -46,7 +48,7 @@ module LinesHelper
       when "lines_new"
 
       when "lines_show"
-        return "↓こうつぶやきました。↓"
+        return "↓ こうつぶやきました。 ↓"
 
       else
         return "エラー……想定外の画面です。"
