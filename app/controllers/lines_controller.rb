@@ -1,5 +1,6 @@
 class LinesController < ApplicationController
   before_action :set_line, only: [:show, :edit, :update, :destroy]
+  before_action :test,only: [:new]
 
   # 一覧画面(ついったーっぽく、新しい投稿ほど上に来るように)
   def index
@@ -9,6 +10,7 @@ class LinesController < ApplicationController
 
   # 新規画面表示
   def new
+    binding.pry
   @view_name="lines_new"
     if params[:back]
       @line = Line.new(line_params)
@@ -16,6 +18,12 @@ class LinesController < ApplicationController
       @line=Line.new
     end
   end
+
+def test
+  render plain: "リファラーが不正です"
+  return
+end
+
 
   # 更新画面……情報は「set_line」で取得
   def edit
@@ -27,21 +35,26 @@ class LinesController < ApplicationController
     @view_name="lines_show"
   end
 
-  #確認画面表示
-  def confirm
-    @view_name="lines_confirm"
-    @line = Line.new(line_params)
 
-    if @line.invalid?
-      @view_name="lines_new"
-      render 'new'
+
+    #確認画面表示
+    def confirm
+      binding.pry
+      @view_name="lines_confirm"
+      @line = Line.new(line_params)
+
+      if @line.invalid?
+        @view_name="lines_new"
+        render 'new'
+
+          binding.pry
+      end
     end
-  end
 
   #新規登録処理
   def create
-
-    @line = Line.new(line_params)
+binding.pry
+  @line = Line.new(line_params)
 
     respond_to do |format|
       if @line.save

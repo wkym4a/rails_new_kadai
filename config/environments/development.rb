@@ -4,7 +4,8 @@ Rails.application.configure do
 
   config.eager_load = false
 
-  config.consider_all_requests_local = true
+#開発環境と同じエラーを出すために変更
+  config.consider_all_requests_local = false
 
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
