@@ -31,7 +31,7 @@ module LinesHelper
   #  binding.pry
     case @view_name
       when "tops_index"
-        return "トップ画面ですtesutesu。"
+        return "トップ画面です。"
 
       when "lines_new"
         return "つぶやいてください。"
